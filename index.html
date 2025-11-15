@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Situação de Aprendizagem</title>
 </head>
@@ -17,25 +13,53 @@
     <header>
         <nav>
             <a href="./index.html">Home</a>
-            <select name="" id="" onchange="window.location.href=this.value">
-                <option value="#">&nbsp;Itens da S.A.</option>
-                <option value="./pag/fundamentoeletroeletronica.html">Fundamentos de Eletroeletrônica</option>
-                <option value="./pag/logicacomputacional.html">Lógica Computacional</option>
-                <option value="./pag/fundamentobancodedados.html">Fundamentos de Banco de Dados</option>
-                <option value="./pag/fundamentoredes.html">Fundamentos de Redes</option>
-                <option value="./pag/logicaprogramacao.html">Lógica de Programação</option>
-                <option value="./pag/fundamentotecnologiadainformacao.html">Fundamentos de Tecnologia da Informação
-                </option>
-            </select>
         </nav>
+        <select name="" id="" onchange="location.href=this.value">
+            <option value="./paginas/logicacomp.html">Lógica Computacional</option>
+            <option value="./paginas/logicaprog.html">Lógica de Programação</option>
+            <option value="./paginas/fundredes.html">Fundamentos de Redes</option>
+            <option value="./paginas/fundbancodedados.html">Fundamentos de Banco de Dados</option>
+            <option value="./paginas/fundeletroeletronica.html">Fundamentos de Eletroeletrônica</option>
+            <option value="./paginas/fundtecnologiainformacao.html">Fundamentos de Tecnologia da Informação</option>
+        </select>
     </header>
-
     <main>
-        <div id="capa-home">
-            <h1>Fábio Trevisan</h1>
-            <p>Situação de Aprendizagem</p>
+        <div id="inicio">
+            <div>
+                <h1>Fábio Trevisan</h1>
+                <h2>Situação de Aprendizagem</h2>
+            </div>
+        </div>
+        <div id="sobre">
+            <div class="texto">
+                <div>
+                    <h1>Quem sou eu?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis doloribus totam magni
+                        architecto praesentium, explicabo excepturi eaque, deserunt distinctio, sit esse impedit amet
+                        nostrum minus ullam ipsa illum aliquam dolor?</p>
+                </div>
+                <details>
+                    <summary>Texto</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque expedita deserunt recusandae
+                        excepturi culpa distinctio? Quisquam voluptate earum itaque maiores esse odio totam soluta nisi,
+                        minus autem reiciendis atque eligendi.</p>
+                </details>
+            </div>
+            <div id="trabalhoCom">
+                <img src="./imagens/fabio-trevisan.png" alt="Fabio Trevisan" class="imagem">
+                <h1>Trabalho com:</h1>
+                <div class="linhaImg">
+                    <img src="./imagens/html.png" alt="Logo HTML" width="75" height="75">
+                    <img src="./imagens/css.png" alt="Logo CSS" width="75" height="75">
+                    <img src="./imagens/js.png" alt="Logo JS" width="75" height="75">
+                </div>
+            </div>
         </div>
     </main>
+
+    <footer>
+        <sup>Por Fabio J. Trevisan &copy;</sup>
+    </footer>
 </body>
 
 </html>
