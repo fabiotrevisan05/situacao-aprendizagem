@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
 
+    <script src="../js/bancodedados.js" defer></script>
+
     <title>Situação de Aprendizagem</title>
 </head>
 
@@ -25,8 +27,155 @@
     </header>
 
     <main>
+        <section>
+            <h1>SGBDs</h1>
+            <p>Os sistemas de gerenciamento de banco de dados são responsaveis por definiar a forma que o banco de
+                dados bai trabalhar</p>
+            <div class="dividir-texto">
+                <div>
+                    <h1>Relacionais</h1>
+                    <p>Os bancos relacionais são muito parecidos com um Excel. Eles tem colunas e linhas onde as
+                        colunas definem qual dado será guardado e cada linha é uma entrada diferente na tabela. </p>
+                </div>
+                <div>
+                    <h1>Não-relacionais</h1>
+                    <p>São muito mais flexiveis que um banco relacional, permitindo armazenar dados com chave:valor
+                    </p>
+                    <h2>Ex: Arquivo JSON</h2>
+                    <pre><code>
+{
+  "nome": "João",
+  "idade": 30,
+  "carro": null
+}
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+        <div class="separar"></div>
+        <section class="fundo-escuro">
+            <h1>Principais Bancos</h1>
+            <ul class="identacao">
+                <li>
+                    <h2>MongoDB</h2>
+                </li>
+                <ul>
+                    <li>Banco não-relacional</li>
+                    <li>Orientado a documentos</li>
+                    <li>Suporta transações ACID</li>
+                </ul>
+            </ul>
 
-    </main>
+            <ul class="identacao">
+                <li>
+                    <h2>PostgreSQL</h2>
+                </li>
+                <ul>
+                    <li>Banco relacional</li>
+                    <li>Open source e robusto</li>
+                    <li>Suporta JSON e extensões avançadas</li>
+                </ul>
+            </ul>
+
+            <ul class="identacao">
+                <li>
+                    <h2>Redis</h2>
+                </li>
+                <ul>
+                    <li>Banco em memória</li>
+                    <li>Estrutura chave-valor</li>
+                    <li>Alta performance para cache</li>
+                </ul>
+            </ul>
+        </section>
+                <div class="separar"></div>
+        <section>
+            <h1>Dicionario de dados</h1>
+            <p>É uma lista organizada que explica cada dado guardado no sistema. Mostra detalhes como nome da coluna,
+                que tipo de informação aceita (texto, número, true/false) e para que serve cada campo.</p>
+            <ul>
+                <li>Texto - armazena palavras e frases como nomes e endereços</li>
+                <li>Número inteiro - guarda números sem casas decimais como idade e quantidade</li>
+                <li>Número decimal - para valores com vírgula como preços e medidas</li>
+                <li>Booleano - armazena apenas verdadeiro ou falso</li>
+            </ul>
+        </section>
+                <div class="separar"></div>
+        <section class="fundo-escuro">
+            <h1>Modelagem de banco de dados</h1>
+
+                <div>
+                    <h1>MER</h1>
+                    <p>O Modelo entidade-relacionamento é o que se faz antes de criar o DER. É apenas a idéia. Se define
+                        entidades, atributos, relaceos, mas sem pensar por enquanto na implementação.</p>
+                </div>
+                <div>
+                    <h1>DER</h1>
+                    <p>O Diagrama entidade-relacionamento é o "mapa" do banco de dados. Como na imagem abaixo, o DER vai
+                        ser a representação visual de implementação do banco de dados.</p>
+                        <div class="dividir-texto">
+                            <div>
+                                <img src="../imagens/bancomassaneiro.png" alt="" style="max-width: 100%; outline: 2px solid black; border-radius: 1rem;">
+                            </div>
+                            <div>
+                                <h1>
+                                    Entidades principais:
+                                </h1>
+                                <ul>
+                                    <li>Academia - estabelecimento que oferece planos de assinatura</li>
+                                    <li>Plano_assinatura - pacotes com valores mensais e duração específica</li>
+                                    <li>Aluno - pessoa matriculada que contrata planos e participa de treinos</li>
+                                    <li>Treino - programa de exercícios criado por instrutores</li>
+                                    <li>Exercício - atividades específicas que compõem os treinos</li>
+                                    <li>Instrutor - profissional responsável por criar treinos</li>
+                                    <li>Avaliação - registro de notas e comentários sobre o plano do aluno</li>
+                                </ul>
+                                <h1>
+                                    Relacionamentos:
+                                </h1>
+                                <ul>
+                                    <li>Oferece (1:n) - uma academia oferece vários planos</li>
+                                    <li>Contrata (1:n) - um aluno pode contratar vários planos ao longo do tempo</li>
+                                    <li>Pertence (1:1) - cada aluno pertence a uma academia</li>
+                                    <li>Participa (1:n) - um aluno participa de vários treinos</li>
+                                    <li>Gera (1:1) - cada contratação gera uma avaliação</li>
+                                    <li>Contém (1:n) - um treino contém vários exercícios</li>
+                                    <li>Cria (1:n) - um instrutor cria vários treinos</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                </div>
+        </section>
+                <div class="separar"></div>
+<section>
+    <h1>Exemplo de banco de dados</h1>
+    
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+    
+    <label for="dataNascimento">Nascimento:</label>
+    <input type="date" id="dataNascimento">
+    
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf">
+    
+    <button onclick="adicionarRegistro()">Adicionar</button>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nascimento</th>
+                <th>CPF</th>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+        </tbody>
+    </table>
+</section>
+                </main>
 
     <footer>
         <sup>Por Fabio J. Trevisan &copy;</sup>

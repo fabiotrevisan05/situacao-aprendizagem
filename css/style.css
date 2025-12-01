@@ -4,11 +4,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {}
-
 header {
     padding: 0.5rem;
-    position: fixed;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -22,6 +19,15 @@ a {
     color: black;
 }
 
+main {
+    margin-top: 4rem;
+    padding: 0 15%;
+}
+
+h1, h2, h3{
+    margin-bottom: 1rem;
+}
+
 button,
 select,
 details {
@@ -32,62 +38,14 @@ details {
     background-color: transparent;
 }
 
+section{
+    margin: 4rem 0;
+}
+
 details {
     width: 50%;
     margin: 2rem 0;
     text-align: center;
-}
-
-.texto {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.imagem {
-    border-radius: 1rem;
-}
-
-#inicio {
-    height: 100vh;
-    background-image: url(../imagens/fundo-inicio.jpeg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    padding: 0 3rem;
-    font-size: 2rem;
-    color: white;
-}
-
-#sobre {
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3rem;
-}
-
-#trabalhoCom {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.linhaImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
 }
 
 details {
@@ -100,4 +58,66 @@ footer {
     padding: 0.5rem 0;
     color: white;
     background-color: black;
+}
+
+.dividir-texto {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.dividir-texto > div {
+    width: 50%;
+}
+
+.separar {
+    height: 3rem;
+}
+
+.identacao{
+    margin-left: 3rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    outline: 2px solid black;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #e1e1e1;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+.fundo-escuro {
+    background-color: #cfcfcf;
+    padding: 5rem;
+    border-radius: 2rem;
 }
