@@ -15,6 +15,7 @@
             <a href="../index.html">Home</a>
         </nav>
         <select name="" id="" onchange="location.href=this.value">
+            <option>Matérias</option>
             <option value="./logicacomp.html">Lógica Computacional</option>
             <option value="./logicaprog.html">Lógica de Programação</option>
             <option value="./fundredes.html">Fundamentos de Redes</option>
@@ -25,7 +26,204 @@
     </header>
 
     <main>
+        <section>
+            <h1>O que são redes de computadores?</h1>
+            <p>Redes de computadores conectam dispositivos para compartilhar recursos e informações. Elas permitem que computadores, impressoras, servidores e outros equipamentos se comuniquem.</p>
+        </section>
 
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Rede mínima</h1>
+            <p>Uma rede mínima precisa de pelo menos dois dispositivos conectados. Por exemplo, dois computadores ligados por um cabo Ethernet ou via Wi-Fi.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>O que é a internet?</h1>
+            <p>A internet é uma rede global que conecta milhões de redes menores. Inclui redes privadas, públicas, acadêmicas, empresariais e governamentais.</p>
+
+            <h2>O que compõe a internet?</h2>
+            <ul>
+                <li>Provedores de internet</li>
+                <li>Roteadores e switches</li>
+                <li>Cabos de fibra óptica, cobre e wireless</li>
+                <li>Servidores e data centers</li>
+                <li>Protocolos de comunicação</li>
+            </ul>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>O que é a web?</h1>
+            <p>A web é um sistema de documentos e recursos conectados que você acessa pela internet. Usa HTTP para enviar dados e HTML para organizar as páginas.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Mapa de fibra óptica</h1>
+            <p>O mapa global mostra os cabos submarinos e terrestres que conectam continentes. Esses cabos enviam dados rapidamente usando luz.</p>
+            <p>Por exemplo, cabos como o MAREA ligam Europa à América do Norte pelo Atlântico.</p>
+            <!-- Placeholder for map -->
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Componentes de hardware de uma rede Wi-Fi</h1>
+            <ul>
+                <li>Roteador Wi-Fi: conecta sua rede local à internet e distribui o sinal sem fio</li>
+                <li>Pontos de acesso: aumentam o alcance do sinal Wi-Fi</li>
+                <li>Adaptadores Wi-Fi: placas ou dispositivos que permitem conectar computadores à rede sem fio</li>
+                <li>Antenas: melhoram o envio e recebimento do sinal</li>
+            </ul>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Componentes de hardware de uma rede local com cabo</h1>
+            <ul>
+                <li>Switch: conecta vários dispositivos na mesma rede local</li>
+                <li>Cabos Ethernet: cabos de cobre que transmitem dados</li>
+                <li>Placas de rede: interfaces que conectam o computador à rede</li>
+                <li>Roteador: conecta a rede local à internet</li>
+            </ul>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Protocolo de comunicação</h1>
+            <p>Um protocolo de comunicação define regras para dispositivos se comunicarem em uma rede. Ele especifica como formatar mensagens, a ordem de envio e como lidar com erros.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Modelo OSI</h1>
+            <p>O Modelo OSI é uma referência para redes de computadores, dividido em 7 camadas:</p>
+            <ol>
+                <li>Física: envia bits</li>
+                <li>Enlace: controla a conexão e detecta erros</li>
+                <li>Rede: roteia e endereça com IP</li>
+                <li>Transporte: controla o fluxo e corrige erros</li>
+                <li>Sessão: cria e mantém sessões</li>
+                <li>Apresentação: traduz dados e criptografa</li>
+                <li>Aplicação: interfaces para programas do usuário</li>
+            </ol>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Modelo TCP/IP</h1>
+            <p>O Modelo TCP/IP é usado na internet, com 4 camadas:</p>
+            <ol>
+                <li>Interface de rede: cobre as camadas física e enlace do OSI</li>
+                <li>Internet: roteia e endereça com IP</li>
+                <li>Transporte: usa TCP e UDP</li>
+                <li>Aplicação: protocolos como HTTP, FTP, SMTP</li>
+            </ol>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Protocolo IP v4 e v6</h1>
+            <p>IP v4: versão atual, usa endereços de 32 bits (exemplo: 192.168.1.1). Suporta cerca de 4 bilhões de endereços.</p>
+            <p>IP v6: nova versão, usa endereços de 128 bits (exemplo: 2001:0db8:85a3:0000:0000:8a2e:0370:7334). Suporta muitos mais endereços e é mais seguro.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Configuração de IP e TCP em Node.js</h1>
+            <p>Em Node.js, para o backend, use o módulo 'net' para TCP e 'http' para HTTP/IP. Configure o host e a porta no servidor.</p>
+            <pre><code>const net = require('net');
+
+const server = net.createServer((socket) => {
+  socket.write('Olá do servidor TCP!');
+  socket.end();
+});
+
+server.listen(8080, '127.0.0.1', () => {
+  console.log('Servidor TCP ouvindo em 127.0.0.1:8080');
+});</code></pre>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Protocolo HTTP</h1>
+            <p>HTTP é o protocolo que transfere dados na web. Ele define como formatar e enviar mensagens entre cliente e servidor.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Protocolo HTTPS</h1>
+            <p>HTTPS é a versão segura do HTTP. Usa SSL/TLS para criptografar a comunicação e proteger dados como senhas e informações de cartão.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Framework para HTTP com Node.js</h1>
+            <p>Exemplo: Express.js, um framework para Node.js que facilita criar APIs e aplicações web.</p>
+            <pre><code>const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Olá, mundo!');
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000');
+});</code></pre>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Exemplos de código backend para troca de mensagens</h1>
+            <h2>Exemplo 1: Servidor HTTP simples</h2>
+            <pre><code>const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Mensagem do servidor');
+});
+
+server.listen(3000);</code></pre>
+            <h2>Exemplo 2: API REST com Express</h2>
+            <pre><code>const express = require('express');
+
+const app = express();
+
+app.use(express.json());
+
+app.post('/message', (req, res) => {
+  const message = req.body.message;
+  res.json({response: `Recebido: ${message}`});
+});
+
+app.listen(3000);</code></pre>
+            <h2>Exemplo 3: WebSocket para mensagens em tempo real</h2>
+            <pre><code>const WebSocket = require('ws');
+
+const wss = new WebSocket.Server({port: 8080});
+
+wss.on('connection', (ws) => {
+  ws.on('message', (message) => {
+    ws.send(`Eco: ${message}`);
+  });
+});</code></pre>
+        </section>
     </main>
 
     <footer>

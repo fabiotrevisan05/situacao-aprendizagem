@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <title>Lógica de Programação</title>
 
-    <title>Situação de Aprendizagem</title>
+    <script src="../js/logicaprog.js" defer></script>
+
+    <script>
+
+    </script>
 </head>
 
 <body>
@@ -14,9 +19,9 @@
         <nav>
             <a href="../index.html">Home</a>
         </nav>
-        <select name="" id="" onchange="location.href=this.value">
+        <select onchange="location.href=this.value">
             <option value="./logicacomp.html">Lógica Computacional</option>
-            <option value="./logicaprog.html">Lógica de Programação</option>
+            <option value="./logicaprog.html" selected>Lógica de Programação</option>
             <option value="./fundredes.html">Fundamentos de Redes</option>
             <option value="./fundbancodedados.html">Fundamentos de Banco de Dados</option>
             <option value="./fundeletroeletronica.html">Fundamentos de Eletroeletrônica</option>
@@ -25,7 +30,241 @@
     </header>
 
     <main>
+        <section>
+            <h1>O que são Linguagens de Programação?</h1>
+            <p>Linguagens de programação são sistemas de comunicação usados para dar instruções aos computadores. Elas
+                permitem que desenvolvedores escrevam códigos que o computador consegue entender e executar para
+                realizar tarefas específicas.</p>
 
+            <div class="dividir-texto">
+                <div>
+                    <h2>C++</h2>
+                    <p>Linguagem de alto desempenho usada em sistemas operacionais, jogos e aplicações que
+                        precisam de velocidade. É uma extensão da linguagem C com recursos de programação orientada a
+                        objetos.</p>
+                </div>
+                <div>
+                    <h2>JavaScript</h2>
+                    <p>Linguagem essencial para desenvolvimento web. Permite criar páginas interativas e dinâmicas. Roda
+                        no navegador e também no servidor através do Node.js.</p>
+                </div>
+            </div>
+
+            <div class="dividir-texto">
+                <div>
+                    <h2>Java</h2>
+                    <p>Muito usada em aplicações empresariais, Android e sistemas de
+                        grande porte. Funciona em qualquer plataforma através da JVM (Java Virtual Machine).</p>
+                </div>
+                <div>
+                    <h2>Python</h2>
+                    <p>Linguagem simples, ideal para iniciantes. Muito usada em ciência de dados,
+                        inteligência artificial, automação e desenvolvimento web. Possui sintaxe muito clara e legível.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2>PHP</h2>
+                <p>Linguagem focada em desenvolvimento web server-side. Usada para criar sites dinâmicos e sistemas web.
+                    Muito popular em WordPress e outros sistemas de gerenciamento de conteúdo. Hoje em dia seu uso está caindo, mas ainda existe.</p>
+            </div>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Tipos de Linguagens</h1>
+
+            <div class="dividir-texto">
+                <div>
+                    <h2>Linguagem Interpretada</h2>
+                    <p>O código é executado por um interpretador que roda linha a linha em tempo de execução. Não gera arquivo
+                        executável, o código fonte é lido e executado diretamente.</p>
+                    <ul>
+                        <li>Exemplos: Python, JavaScript, PHP</li>
+                        <li>Vantagem: Mais fácil de testar e debugar</li>
+                        <li>Desvantagem: Geralmente mais lenta</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Linguagem Compilada</h2>
+                    <p>O código fonte é transformado em código de máquina (arquivo executável) antes de ser executado. O
+                        compilador traduz todo o programa de uma vez.</p>
+                    <ul>
+                        <li>Exemplos: C, C++</li>
+                        <li>Vantagem: Execução mais rápida</li>
+                        <li>Desvantagem: Processo de compilação necessário</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>HTML e CSS</h1>
+
+            <div class="dividir-texto">
+                <div>
+                    <h2>HTML</h2>
+                    <p>HTML é a linguagem de marcação usada para estruturar o conteúdo de páginas
+                        web. Define elementos como títulos, parágrafos, links, imagens e formulários.</p>
+                    <p>O HTML não é uma linguagem de programação, mas sim uma linguagem de marcação que organiza e
+                        estrutura o conteúdo.</p>
+                </div>
+                <div>
+                    <h2>CSS</h2>
+                    <p>CSS é usado para estilizar páginas HTML. Define cores, fontes, espaçamentos,
+                        layouts e toda a aparência visual do site.</p>
+                    <p>O CSS trabalha junto com o HTML para criar páginas web bonitas e responsivas, separando a
+                        estrutura do conteúdo da sua apresentação visual.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>IDE - Ambiente de Desenvolvimento</h1>
+            <p>IDE (Integrated Development Environment) é um programa que reúne todas as ferramentas necessárias para
+                escrever, testar e executar código em um só lugar.</p>
+
+            <h2>Principais IDEs:</h2>
+            <ul class="identacao">
+                <li>
+                    <h3>Visual Studio Code (VSCode)</h3>
+                </li>
+                <ul>
+                    <li>Editor leve da Microsoft</li>
+                    <li>Suporta várias linguagens</li>
+                    <li>Muito popular e gratuito</li>
+                </ul>
+            </ul>
+
+            <ul class="identacao">
+                <li>
+                    <h3>IntelliJ IDEA</h3>
+                </li>
+                <ul>
+                    <li>IDE poderosa para Java e outras linguagens JVM</li>
+                    <li>Oferece recursos avançados de refatoração</li>
+                    <li>Versões gratuita</li>
+                </ul>
+            </ul>
+
+            <ul class="identacao">
+                <li>
+                    <h3>PyCharm</h3>
+                </li>
+                <ul>
+                    <li>Especializada em Python</li>
+                    <li>Ferramentas avançadas para ciência de dados</li>
+                </ul>
+            </ul>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Ordenação de Números (1 a 20)</h1>
+
+            <button onclick="ordenarCrescente()">Ordem Crescente</button>
+            <button onclick="ordenarDecrescente()">Ordem Decrescente</button>
+
+            <p id="resultadoCrescente" style="margin-top: 1rem; font-weight: bold;"></p>
+            <p id="resultadoDecrescente" style="font-weight: bold;"></p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>BubbleSort - 10 Números Aleatórios (1 a 20)</h1>
+            <p>O BubbleSort compara pares de elementos proximos e os troca de posição se estiverem na ordem errada.
+                Este processo se repete até que nenhuma troca seja necessária.</p>
+
+            <button onclick="bubbleSort()">Gerar e Ordenar</button>
+
+            <p id="numerosOriginais" style="margin-top: 1rem;"></p>
+            <p id="resultadoBubble" style="font-weight: bold;"></p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Soma de Array - 10 Números Aleatórios (1 a 220)</h1>
+
+            <button onclick="somarArray()">Gerar e Somar</button>
+
+            <p id="arrayNumeros" style="margin-top: 1rem;"></p>
+            <p id="resultadoSoma" style="font-weight: bold; color: green;"></p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Matriz 3x3 - Números Aleatórios (1 a 20)</h1>
+
+            <button onclick="gerarMatriz()">Gerar Matriz</button>
+
+            <div id="resultadoMatriz" style="margin-top: 1rem;"></div>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Calculadora de IMC</h1>
+            <p>O IMC (Índice de Massa Corporal) é calculado dividindo o peso pela altura ao quadrado: IMC = peso /
+                (altura × altura)</p>
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" step="0.1" placeholder="Ex: 70.5">
+
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+
+            <button onclick="calcularIMC()">Calcular IMC</button>
+
+            <p id="resultadoIMC" style="margin-top: 1rem; font-weight: bold; color: blue;"></p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Conversor de Temperatura</h1>
+
+            <label for="temperatura">Temperatura:</label>
+            <input type="number" id="temperatura" step="0.1" placeholder="Digite a temperatura">
+
+            <label for="tipoTemp">Converter:</label>
+            <select id="tipoTemp">
+                <option value="CF">Celsius para Fahrenheit</option>
+                <option value="FC">Fahrenheit para Celsius</option>
+            </select>
+
+            <button onclick="converterTemp()">Converter</button>
+
+            <p id="resultadoTemp" style="margin-top: 1rem; font-weight: bold;"></p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Busca Linear</h1>
+            <p>A busca linear é o algoritmo mais simples de busca. Ele percorre o array elemento por elemento, do início
+                ao fim, comparando cada valor com o valor procurado. Quando encontra o valor, retorna a posição. Se
+                chegar ao final sem encontrar, informa que o valor não existe no array.</p>
+
+            <p>É um método eficiente para arrays pequenos ou quando não sabemos se os dados estão ordenados. Sua
+                complexidade é O(n), ou seja, no pior caso precisa verificar todos os elementos.</p>
+
+            <label for="valorBusca">Valor para buscar:</label>
+            <input type="number" id="valorBusca" placeholder="Digite um número">
+
+            <button onclick="buscaLinear()">Buscar</button>
+
+            <p id="arrayBusca" style="margin-top: 1rem;"></p>
+            <p id="resultadoBusca" style="font-weight: bold; color: purple;"></p>
+        </section>
     </main>
 
     <footer>

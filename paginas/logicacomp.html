@@ -15,6 +15,7 @@
             <a href="../index.html">Home</a>
         </nav>
         <select name="" id="" onchange="location.href=this.value">
+                      <option>Matérias</option>
             <option value="./logicacomp.html">Lógica Computacional</option>
             <option value="./logicaprog.html">Lógica de Programação</option>
             <option value="./fundredes.html">Fundamentos de Redes</option>
@@ -25,7 +26,128 @@
     </header>
 
     <main>
+        <section>
+            <h1>O que são fluxogramas?</h1>
+            <p>Fluxogramas mostram processos de forma visual, como um mapa dos passos de um algoritmo. Usamos eles para planejar e explicar lógica de programação.</p>
 
+            <h2>Simbologia básica</h2>
+            <ul>
+                <li>Oval: início ou fim</li>
+                <li>Retângulo: ação ou processo</li>
+                <li>Losango: decisão</li>
+                <li>Paralelogramo: entrada de informacoes</li>
+            </ul>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>O que são algoritmos?</h1>
+            <p>Algoritmos são passos organizados para resolver problemas. Aparecem em programação, matemática, computação e tarefas automatizadas.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>O que é o Portugol?</h1>
+            <p>Portugol é uma linguagem simples em português para aprender lógica de programação. Imita linguagens reais, mas usa português estruturado.</p>
+
+            <h2>O que é o Portugol Studio?</h2>
+            <p>Portugol Studio é um programa gratuito para escrever e rodar algoritmos em Portugol. Tem editor de texto, compilador e ferramentas para depurar.</p>
+            <img src="../imagens/portugol.png" alt="">
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Variáveis e constantes</h1>
+            <p>Variáveis guardam valores que mudam durante o programa. Constantes são valores fixos que não alteram.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Tipos de dados em Portugol</h1>
+            <ul>
+                <li>Booleano: verdadeiro ou falso</li>
+                <li>Caracter: um único caractere</li>
+                <li>Cadeia: sequência de caracteres</li>
+                <li>Inteiro: números sem casas decimais</li>
+                <li>Real: números com casas decimais</li>
+                <li>Vetor: grupo de elementos iguais</li>
+            </ul>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Exemplos de programas em Portugol com funções</h1>
+
+            <h2>Exemplo 1: Saudação</h2>
+            <pre><code>programa {
+  funcao inicio() {
+    escreva("Olá, mundo!")
+  }
+}</code></pre>
+
+            <h2>Exemplo 2: Soma</h2>
+            <pre><code>programa {
+  funcao inicio() {
+    inteiro a = 5, b = 3
+    escreva("Soma: ", a + b)
+  }
+}</code></pre>
+
+            <h2>Exemplo 3: Condicional</h2>
+            <pre><code>programa {
+  funcao inicio() {
+    inteiro numero = 10
+    se (numero > 5) {
+      escreva("Maior que 5")
+    } senao {
+      escreva("Menor ou igual a 5")
+    }
+  }
+}</code></pre>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Exemplos de programas em Portugol com vetores</h1>
+
+            <h2>Exemplo 1: Vetor de números</h2>
+            <pre><code>programa {
+  funcao inicio() {
+    inteiro vetor[5] = {1, 2, 3, 4, 5}
+    para (inteiro i = 0; i < 5; i++) {
+      escreva(vetor[i], " ")
+    }
+  }
+}</code></pre>
+
+            <h2>Exemplo 2: Vetor de strings</h2>
+            <pre><code>programa {
+  funcao inicio() {
+    cadeia nomes[3] = {"João", "Maria", "José"}
+    para (inteiro i = 0; i < 3; i++) {
+      escreva(nomes[i], "\n")
+    }
+  }
+}</code></pre>
+
+            <h2>Exemplo 3: Soma de vetor</h2>
+            <pre><code>programa {
+  funcao inicio() {
+    inteiro vetor[4] = {10, 20, 30, 40}
+    inteiro soma = 0
+    para (inteiro i = 0; i < 4; i++) {
+      soma = soma + vetor[i]
+    }
+    escreva("Soma: ", soma)
+  }
+}</code></pre>
+        </section>
     </main>
 
     <footer>

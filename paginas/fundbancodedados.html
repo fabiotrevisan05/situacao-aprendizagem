@@ -17,6 +17,7 @@
             <a href="../index.html">Home</a>
         </nav>
         <select name="" id="" onchange="location.href=this.value">
+                        <option>Matérias</option>
             <option value="./logicacomp.html">Lógica Computacional</option>
             <option value="./logicaprog.html">Lógica de Programação</option>
             <option value="./fundredes.html">Fundamentos de Redes</option>
@@ -29,19 +30,16 @@
     <main>
         <section>
             <h1>SGBDs</h1>
-            <p>Os sistemas de gerenciamento de banco de dados são responsaveis por definiar a forma que o banco de
-                dados bai trabalhar</p>
+            <p>Sistemas de gerenciamento de banco de dados definem como o banco vai funcionar.</p>
             <div class="dividir-texto">
                 <div>
                     <h1>Relacionais</h1>
-                    <p>Os bancos relacionais são muito parecidos com um Excel. Eles tem colunas e linhas onde as
-                        colunas definem qual dado será guardado e cada linha é uma entrada diferente na tabela. </p>
+                    <p>Bancos relacionais parecem uma planilha do Excel. Têm colunas que definem os dados e linhas com entradas diferentes.</p>
                 </div>
                 <div>
                     <h1>Não-relacionais</h1>
-                    <p>São muito mais flexiveis que um banco relacional, permitindo armazenar dados com chave:valor
-                    </p>
-                    <h2>Ex: Arquivo JSON</h2>
+                    <p>São mais flexíveis que os relacionais, guardam dados em chave:valor.</p>
+                    <h2>Exemplo: arquivo JSON</h2>
                     <pre><code>
 {
   "nome": "João",
@@ -54,7 +52,7 @@
         </section>
         <div class="separar"></div>
         <section class="fundo-escuro">
-            <h1>Principais Bancos</h1>
+            <h1>Principais bancos</h1>
             <ul class="identacao">
                 <li>
                     <h2>MongoDB</h2>
@@ -72,7 +70,7 @@
                 </li>
                 <ul>
                     <li>Banco relacional</li>
-                    <li>Open source e robusto</li>
+                    <li>Open source e sólido</li>
                     <li>Suporta JSON e extensões avançadas</li>
                 </ul>
             </ul>
@@ -84,20 +82,42 @@
                 <ul>
                     <li>Banco em memória</li>
                     <li>Estrutura chave-valor</li>
-                    <li>Alta performance para cache</li>
+                    <li>Rápido para cache</li>
                 </ul>
             </ul>
         </section>
                 <div class="separar"></div>
-        <section>
-            <h1>Dicionario de dados</h1>
-            <p>É uma lista organizada que explica cada dado guardado no sistema. Mostra detalhes como nome da coluna,
-                que tipo de informação aceita (texto, número, true/false) e para que serve cada campo.</p>
+
+        <section class="fundo-escuro">
+            <h1>Exemplo de diagrama MER</h1>
+            <p>Exemplo de um sistema de biblioteca:</p>
             <ul>
-                <li>Texto - armazena palavras e frases como nomes e endereços</li>
-                <li>Número inteiro - guarda números sem casas decimais como idade e quantidade</li>
-                <li>Número decimal - para valores com vírgula como preços e medidas</li>
-                <li>Booleano - armazena apenas verdadeiro ou falso</li>
+                <li><strong>Entidades:</strong> Livro, Usuário, Empréstimo</li>
+                <li><strong>Atributos:</strong></li>
+                <ul>
+                    <li>Livro: código, título, autor, ano</li>
+                    <li>Usuário: id, nome, endereço, telefone</li>
+                    <li>Empréstimo: data_emprestimo, data_devolucao</li>
+                </ul>
+                <li><strong>Relações:</strong></li>
+                <ul>
+                    <li>Usuário empresta Livro (1:n) - um usuário pega vários livros</li>
+                    <li>Livro é emprestado por Usuário (n:1) - um livro vai para um usuário por vez</li>
+                    <li>Empréstimo registra Livro e Usuário (1:1:1) - cada empréstimo liga um livro a um usuário</li>
+                </ul>
+            </ul>
+            <!-- Placeholder for MER diagram image -->
+        </section>
+
+                <div class="separar"></div>
+<section>
+            <h1>Dicionário de dados</h1>
+            <p>É uma lista organizada que explica cada dado no sistema. Mostra nome da coluna, tipo de informação (texto, número, sim/não) e o que representa.</p>
+            <ul>
+                <li>Texto - guarda palavras e frases como nomes e endereços</li>
+                <li>Número inteiro - números sem vírgula como idade e quantidade</li>
+                <li>Número decimal - valores com vírgula como preços e medidas</li>
+                <li>Booleano - só verdadeiro ou falso</li>
             </ul>
         </section>
                 <div class="separar"></div>
@@ -106,13 +126,11 @@
 
                 <div>
                     <h1>MER</h1>
-                    <p>O Modelo entidade-relacionamento é o que se faz antes de criar o DER. É apenas a idéia. Se define
-                        entidades, atributos, relaceos, mas sem pensar por enquanto na implementação.</p>
+                    <p>O Modelo entidade-relacionamento vem antes do DER. É só a ideia básica. Define entidades, atributos e relações, sem pensar em como implementar.</p>
                 </div>
                 <div>
                     <h1>DER</h1>
-                    <p>O Diagrama entidade-relacionamento é o "mapa" do banco de dados. Como na imagem abaixo, o DER vai
-                        ser a representação visual de implementação do banco de dados.</p>
+                    <p>O Diagrama entidade-relacionamento é o mapa do banco. Como na imagem abaixo, mostra visualmente como implementar o banco.</p>
                         <div class="dividir-texto">
                             <div>
                                 <img src="../imagens/bancomassaneiro.png" alt="" style="max-width: 100%; outline: 2px solid black; border-radius: 1rem;">
@@ -122,25 +140,25 @@
                                     Entidades principais:
                                 </h1>
                                 <ul>
-                                    <li>Academia - estabelecimento que oferece planos de assinatura</li>
-                                    <li>Plano_assinatura - pacotes com valores mensais e duração específica</li>
-                                    <li>Aluno - pessoa matriculada que contrata planos e participa de treinos</li>
-                                    <li>Treino - programa de exercícios criado por instrutores</li>
-                                    <li>Exercício - atividades específicas que compõem os treinos</li>
-                                    <li>Instrutor - profissional responsável por criar treinos</li>
-                                    <li>Avaliação - registro de notas e comentários sobre o plano do aluno</li>
+                                    <li>Academia - lugar que vende planos de assinatura</li>
+                                    <li>Plano_assinatura - pacotes com mensalidades e duração</li>
+                                    <li>Aluno - pessoa matriculada que compra planos e faz treinos</li>
+                                    <li>Treino - programa de exercícios feito por instrutores</li>
+                                    <li>Exercício - atividades que formam os treinos</li>
+                                    <li>Instrutor - profissional que cria treinos</li>
+                                    <li>Avaliação - notas e comentários sobre o plano do aluno</li>
                                 </ul>
                                 <h1>
                                     Relacionamentos:
                                 </h1>
                                 <ul>
-                                    <li>Oferece (1:n) - uma academia oferece vários planos</li>
-                                    <li>Contrata (1:n) - um aluno pode contratar vários planos ao longo do tempo</li>
-                                    <li>Pertence (1:1) - cada aluno pertence a uma academia</li>
-                                    <li>Participa (1:n) - um aluno participa de vários treinos</li>
-                                    <li>Gera (1:1) - cada contratação gera uma avaliação</li>
-                                    <li>Contém (1:n) - um treino contém vários exercícios</li>
-                                    <li>Cria (1:n) - um instrutor cria vários treinos</li>
+                                    <li>Oferece (1:n) - uma academia vende vários planos</li>
+                                    <li>Contrata (1:n) - um aluno pode comprar vários planos com o tempo</li>
+                                    <li>Pertence (1:1) - cada aluno vai a uma academia</li>
+                                    <li>Participa (1:n) - um aluno faz vários treinos</li>
+                                    <li>Gera (1:1) - cada contrato cria uma avaliação</li>
+                                    <li>Contém (1:n) - um treino tem vários exercícios</li>
+                                    <li>Cria (1:n) - um instrutor faz vários treinos</li>
                                 </ul>
 
                             </div>
@@ -151,18 +169,18 @@
                 <div class="separar"></div>
 <section>
     <h1>Exemplo de banco de dados</h1>
-    
+
     <label for="nome">Nome:</label>
     <input type="text" id="nome">
-    
+
     <label for="dataNascimento">Nascimento:</label>
     <input type="date" id="dataNascimento">
-    
+
     <label for="cpf">CPF:</label>
     <input type="text" id="cpf">
-    
+
     <button onclick="adicionarRegistro()">Adicionar</button>
-    
+
     <table>
         <thead>
             <tr>
