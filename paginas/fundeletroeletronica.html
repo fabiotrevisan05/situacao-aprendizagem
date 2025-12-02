@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Fundamentos de Eletroeletrônica</title>
+
+    <script src="../js/eletroeletronica.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+        <select onchange="location.href=this.value">
+            <option value="./logicacomp.html">Lógica Computacional</option>
+            <option value="./logicaprog.html">Lógica de Programação</option>
+            <option value="./fundredes.html">Fundamentos de Redes</option>
+            <option value="./fundbancodedados.html">Fundamentos de Banco de Dados</option>
+            <option value="./fundeletroeletronica.html" selected>Fundamentos de Eletroeletrônica</option>
+            <option value="./fundtecnologiainformacao.html">Fundamentos de Tecnologia da Informação</option>
+        </select>
+    </header>
+
+    <main>
+        <section>
+            <h1>Componentes Eletrônicos</h1>
+            <div class="dividir-texto">
+                <div>
+                    <h2>Resistor</h2>
+                    <p>Limita a corrente elétrica no circuito. Serve para proteger componentes e controlar a intensidade
+                        da corrente.</p>
+                </div>
+                <div>
+                    <h2>Diodo LED</h2>
+                    <p>Converte energia elétrica em luz. Usado em iluminação, displays e indicadores luminosos.</p>
+                </div>
+            </div>
+            <div class="dividir-texto">
+                <div>
+                    <h2>Transistor</h2>
+                    <p>Controla grandes correntes usando uma corrente menor.</p>
+                </div>
+                <div>
+                    <h2>Circuito Integrado</h2>
+                    <p>Componentes muito pequenos em um chip pronto para usar.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Sensores em Sistemas Automatizados</h1>
+            <ul class="identacao">
+                <li>
+                    <h2>Sensor de Temperatura</h2>
+                </li>
+                <ul>
+                    <li>Mede temperatura do ambiente ou objetos</li>
+                    <li>Usado em: ar condicionado, estufas, controle industrial</li>
+                </ul>
+            </ul>
+
+            <ul class="identacao">
+                <li>
+                    <h2>Sensor de Umidade</h2>
+                </li>
+                <ul>
+                    <li>Detecta umidade no ar ou no solo</li>
+                    <li>Usado em: irrigação automática, controle de clima</li>
+                </ul>
+            </ul>
+
+            <ul class="identacao">
+                <li>
+                    <h2>Sensor de Luminosidade</h2>
+                </li>
+                <ul>
+                    <li>Mede intensidade de luz</li>
+                    <li>Usado em: iluminação automática, painéis solares</li>
+                </ul>
+            </ul>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Arduino</h1>
+            <div class="dividir-texto">
+                <div>
+                    <h2>O que é?</h2>
+                    <p>Plataforma open-source para criar projetos eletrônicos. Combina hardware e software fáceis de
+                        usar.</p>
+
+                    <h2>Para que serve?</h2>
+                    <ul>
+                        <li>Automação residencial</li>
+                        <li>Robótica</li>
+                        <li>Internet das Coisas (IoT)</li>
+                        <li>Projetos educacionais</li>
+                        <li>Protótipos rápidos</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Vantagens</h2>
+                    <ul>
+                        <li>Barato</li>
+                        <li>Fácil de aprender</li>
+                        <li>Open-source</li>
+                        <li>Comunidade grande</li>
+                        <li>Multiplataforma</li>
+                    </ul>
+
+                    <h2>Desvantagens</h2>
+                    <ul>
+                        <li>Processamento limitado</li>
+                        <li>Pouca memória</li>
+                        <li>Não serve para projetos industriais grandes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Como o Arduino Funciona?</h1>
+            <p>O Arduino tem um microcontrolador que roda um programa enviado pelo computador. Ele lê sensores, processa
+                dados e controla saídas como LEDs e motores.</p>
+
+            <h2>Eletrônica Embarcada</h2>
+            <p>É quando você coloca um sistema eletrônico dentro de um equipamento para ele executar uma função
+                específica. O Arduino serve pra criar protótipos desse tipo de sistema.</p>
+
+            <h2>Linguagem de Programação</h2>
+            <p>O Arduino usa uma linguagem baseada em C/C++, simplificada para iniciantes. A IDE tem bibliotecas prontas
+                que facilitam muito.</p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Entradas e Saídas no Arduino</h1>
+            <div class="dividir-texto">
+                <div>
+                    <h2>Digitais</h2>
+                    <p>Trabalham com dois estados: ligado (HIGH - 5V) e desligado (LOW - 0V).</p>
+                    <ul>
+                        <li>Ler botões</li>
+                        <li>Ligar/desligar LEDs</li>
+                        <li>Comunicação (I2C, SPI, UART)</li>
+                        <li>Controlar relés</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Analógicas</h2>
+                    <p>Trabalham com valores variáveis de 0 a 5V.</p>
+                    <ul>
+                        <li>Ler sensores (temperatura, luz)</li>
+                        <li>Controlar brilho de LEDs (PWM)</li>
+                        <li>Controlar velocidade de motores</li>
+                        <li>Ler potenciômetros</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h2>Lei de Ohm</h2>
+            <p>V = R × I (Tensão = Resistência × Corrente)</p>
+
+            <input id="v" placeholder="Tensão (V)">
+            <input id="i" placeholder="Corrente (I)">
+            <input id="r" placeholder="Resistência (R)">
+
+            <button onclick="calcV()">Calcular V</button>
+            <button onclick="calcI()">Calcular I</button>
+            <button onclick="calcR()">Calcular R</button>
+
+            <p id="resultadoOhm"></p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h2>Potência</h2>
+            <p>Pode ser calculada de 3 formas diferentes</p>
+
+            <input id="pv" placeholder="Tensão (V)">
+            <input id="pi" placeholder="Corrente (I)">
+            <input id="pr" placeholder="Resistência (R)">
+
+            <button onclick="calcP_VI()">P = V × I</button>
+            <button onclick="calcP_V2()">P = V² / R</button>
+            <button onclick="calcP_I2()">P = I² × R</button>
+
+            <p id="resultadoPot"></p>
+        </section>
+
+        <div class="separar"></div>
+
+        <section>
+            <h1>Código Arduino</h1>
+            <h2>Sensor analógico acionando LEDs</h2>
+            <pre><code>// Lê sensor e acende LED conforme o valor
+
+const int sensorPin = A0;
+const int ledVerde = 2;
+const int ledAmarelo = 3;
+const int ledVermelho = 4;
+
+void setup() {
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ledAmarelo, OUTPUT);
+  pinMode(ledVermelho, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int valor = analogRead(sensorPin);
+  float tensao = valor * (5.0 / 1023.0);
+  
+  Serial.print("Sensor: ");
+  Serial.print(valor);
+  Serial.print(" | Tensão: ");
+  Serial.println(tensao);
+  
+  if (valor < 341) {
+    // 0-33% - LED verde
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledAmarelo, LOW);
+    digitalWrite(ledVermelho, LOW);
+  } 
+  else if (valor < 682) {
+    // 34-66% - LED amarelo
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarelo, HIGH);
+    digitalWrite(ledVermelho, LOW);
+  } 
+  else {
+    // 67-100% - LED vermelho
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarelo, LOW);
+    digitalWrite(ledVermelho, HIGH);
+  }
+  
+  delay(500);
+}</code></pre>
+        </section>
+
+        <div class="separar"></div>
+
+        <section class="fundo-escuro">
+            <h1>Diodos e Displays</h1>
+
+            <h2>Diodo</h2>
+            <p>Deixa a corrente passar só em uma direção. Funciona como uma passagem que bloqueia corrente no sentido
+                contrário. Serve para proteger circuitos.</p>
+
+            <h2>Diodo LED</h2>
+            <p>É um diodo especial que emite luz quando passa corrente. Mais econômico que lâmpadas comuns, dura muito e
+                tem várias cores. Usado em tudo: iluminação, telas, sinalizadores.</p>
+
+            <h2>Display de 7 Segmentos</h2>
+            <p>São 7 LEDs organizados em forma de "8". Cada LED pode acender sozinho para formar números de 0 a 9 e
+                algumas letras.</p>
+        </section>
+    </main>
+
+    <footer>
+        <sup>Por Fabio J. Trevisan &copy;</sup>
+    </footer>
+</body>
+
+</html>
